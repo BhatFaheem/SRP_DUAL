@@ -1,0 +1,70 @@
+version 3
+run General-0-20250413-12:07:19-11652
+attr configname General
+attr datetime 20250413-12:07:19
+attr datetimef 20250413-120719
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.SecureDualNetwork
+attr processid 11652
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network ned.SecureDualNetwork
+config sim-time-limit 100s
+config ned-path .;./ned
+config *.**.debug true
+
+par SecureDualNetwork.router1.out.channel typename "\"ned.DatarateChannel\""
+par SecureDualNetwork.router1.out.channel disabled false
+attr mutable ""
+par SecureDualNetwork.router1.out.channel delay 0.01s
+attr mutable ""
+attr unit s
+par SecureDualNetwork.router1.out.channel datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par SecureDualNetwork.router1.out.channel ber 0
+attr mutable ""
+par SecureDualNetwork.router1.out.channel per 0
+attr mutable ""
+par SecureDualNetwork.router2.out.channel typename "\"ned.DatarateChannel\""
+par SecureDualNetwork.router2.out.channel disabled false
+attr mutable ""
+par SecureDualNetwork.router2.out.channel delay 0.01s
+attr mutable ""
+attr unit s
+par SecureDualNetwork.router2.out.channel datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par SecureDualNetwork.router2.out.channel ber 0
+attr mutable ""
+par SecureDualNetwork.router2.out.channel per 0
+attr mutable ""
+par SecureDualNetwork.router3.out.channel typename "\"ned.DatarateChannel\""
+par SecureDualNetwork.router3.out.channel disabled false
+attr mutable ""
+par SecureDualNetwork.router3.out.channel delay 0.01s
+attr mutable ""
+attr unit s
+par SecureDualNetwork.router3.out.channel datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par SecureDualNetwork.router3.out.channel ber 0
+attr mutable ""
+par SecureDualNetwork.router3.out.channel per 0
+attr mutable ""
+par SecureDualNetwork.router1.dualRouting typename "\"ned.DUALRouting\""
+par SecureDualNetwork.router1 typename "\"ned.DUALRouter\""
+par SecureDualNetwork.router2.dualRouting typename "\"ned.DUALRouting\""
+par SecureDualNetwork.router2 typename "\"ned.DUALRouter\""
+par SecureDualNetwork.router3.dualRouting typename "\"ned.DUALRouting\""
+par SecureDualNetwork.router3 typename "\"ned.DUALRouter\""
+par SecureDualNetwork typename "\"ned.SecureDualNetwork\""
+
