@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for SRP_DUAL
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I. -Isrc
+#  opp_makemake -f --deep -o SRP_DUAL -I src -I ned
 #
 
 # Name of target to be created (-o option)
@@ -19,7 +19,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Isrc
+INCLUDE_PATH = -Isrc -Ined
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -33,10 +33,11 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/src/DUALRouting.o
+OBJS = $O/src/SecureRouter.o $O/ned/SecRoutingUpdate_m.o
 
 # Message files
-MSGFILES =
+MSGFILES = \
+    ned/SecRoutingUpdate.msg
 
 # SM files
 SMFILES =
